@@ -10,4 +10,4 @@ Pretty terrible right now, but based on the work found here https://github.com/k
 (load-theme 'spacegray t)
 ```
 
-![javascript](https://raw.github.com/nhunzaker/emacs-laravel-plus-theme/master/screenshots/sample.png)
+![javascript](https://raw.github.com/nhunzaker/spacegray-emacs/master/screenshots/sample.jpg)
