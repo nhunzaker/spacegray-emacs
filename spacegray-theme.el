@@ -4,8 +4,9 @@
 ;;; URL: none
 ;;; Version: 0.0.1
 
+;;; Code:
 (unless (>= 24 emacs-major-version)
-  (error "spacegray-theme requires Emacs 24 or later."))
+  (error "Theme spacegray requires Emacs 24 or later"))
 
 (deftheme spacegray "Spacegray color theme")
 
@@ -13,9 +14,9 @@
 
 ;; Highlighting
 (custom-theme-set-faces
-'spacegray
+ 'spacegray
 
- '(default ((t (:background "#2D2D2D" :foreground "#D4D5CE"))))
+ '(default ((t (:background "#2D2D2D" :foreground "#D4D5CE" ))))
  '(cursor  ((t (:background "#D4D5CE"))))
  '(region  ((t (:background "#4f5b66" :foreground unspecified))))
  '(match   ((t (:background "#4f5b66" :foreground unspecified))))
@@ -29,6 +30,16 @@
 
  '(info-index-match ((t (:background "#757268" :foreground unspecified))))
  '(popup-menu-selection-face ((t (:background "#757268" :foreground unspecified))))
+
+ ;; Org Mode ;;
+ ;;;;;;;;;;;;;;
+
+ '(org-done ((t (:foreground "#9DD69B"))))
+ '(org-todo ((t (:foreground "#CF99CF"))))
+ '(org-checkbox ((t (:foreground "#FCD05E"))))
+ '(org-document-title ((t (:foreground "#D4D5CE" :weight bold))))
+ '(org-document-info ((t (:foreground "#757268"))))
+ '(org-document-info-keyword ((t (:foreground "#757268" :weight bold))))
  '(org-clock-overlay ((t (:background "#757268" :foreground unspecified))))
  '(org-agenda-clocking ((t (:background "#757268" :foreground unspecified))))
 
@@ -117,7 +128,7 @@
  `(whitespace-line ((t (:background nil :foreground "#d33682"))))
 
  ;; Flyspell
- '(flyspell-incorrect ((t (:background unspecified :underline (:color "#F7756F" :style wave) :foreground unspecified))))
+ '(flyspell-incorrect ((t (:background "#2D2D2D" :underline (:color "#F7756F" :style wave) :foreground unspecified))))
  '(flyspell-duplicate ((t (:foreground nil :underline (:color "#F7756F" :style wave)))))
 
  ;; Errors
@@ -179,7 +190,7 @@
  ;; Smart Parens ;;
 ;;;;;;;;;;;;;;;;;;
  '(sp-pair-overlay-face ((t (:background "#2D2D2D"))))
-)
+ )
 
 ;;;###autoload
 (when load-file-name

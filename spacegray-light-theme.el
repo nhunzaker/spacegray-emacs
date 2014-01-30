@@ -5,15 +5,15 @@
 ;;; Version: 0.0.1
 
 (unless (>= 24 emacs-major-version)
-  (error "spacegray-theme requires Emacs 24 or later."))
+  (error "Theme spacegray-light requires Emacs 24 or later."))
 
-(deftheme spacegray-light "Spacegray color theme")
+(deftheme spacegray-light "Spacegray Light color theme")
 
 (setq underline-minimum-offset 4)
 
 ;; Highlighting
 (custom-theme-set-faces
- 'spacegray
+ 'spacegray-light
 
  '(default ((t (:background "#EFF1F5" :foreground "#1D3046"))))
  '(cursor  ((t (:background "#BFC5CE"))))
@@ -27,8 +27,22 @@
 
  '(info-index-match ((t (:background "#757268" :foreground unspecified))))
  '(popup-menu-selection-face ((t (:background "#757268" :foreground unspecified))))
- '(org-clock-overlay ((t (:background "#757268" :foreground unspecified))))
- '(org-agenda-clocking ((t (:background "#757268" :foreground unspecified))))
+
+ ;; Org Mode ;;
+ ;;;;;;;;;;;;;;
+
+ '(org-done ((t (:foreground "#9DD69B"))))
+ '(org-todo ((t (:foreground "#B382A8"))))
+ '(org-checkbox ((t (:foreground "#D88E5C"))))
+ '(org-document-title ((t (:foreground "#1D3046" :weight bold))))
+ '(org-document-info ((t (:foreground "#9EA2B6"))))
+ '(org-document-info-keyword ((t (:foreground "#9EA2B6" :weight bold))))
+ '(org-clock-overlay ((t (:background "#9EA2B6" :foreground unspecified))))
+ '(org-agenda-clocking ((t (:background "#9EA2B6" :foreground unspecified))))
+ '(org-level-1 ((t (:foreground "#1D3046"))))
+ '(org-level-2 ((t (:foreground "#1D3046"))))
+ '(org-level-3 ((t (:foreground "#1D3046"))))
+ '(org-level-4 ((t (:foreground "#1D3046"))))
 
  ;; The mode line is found at the bottom of all frames
  '(mode-line ((t (:background "#BFC5CE" :height 140 :foreground "#1D3046" :box (:line-width 10 :color "#BFC5CE" )))))
@@ -46,7 +60,7 @@
  '(flx-highlight-face ((t (:foreground "#C8564A"))))
 
  ;; The Selected Line
- '(hl-line ((t :background transparent :underline unspecified)))
+ '(hl-line ((t :background unspecified :underline unspecified)))
 
  ;; Errors
  '(font-lock-error-face ((t (:background "#C8564A" :foreground "#EFF1F5"))))
@@ -176,7 +190,6 @@
  ;; Smart Parens ;;
 ;;;;;;;;;;;;;;;;;;
  '(sp-pair-overlay-face ((t (:background unspecified))))
-
  )
 
 ;;;###autoload
@@ -190,4 +203,4 @@
 ;; no-byte-compile: t
 ;; End:
 
-;;; spacegray-theme.el ends here
+;;; spacegray-light-theme.el ends here
