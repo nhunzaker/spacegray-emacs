@@ -46,7 +46,7 @@
  '(flx-highlight-face ((t (:foreground "#C8564A"))))
 
  ;; The Selected Line
- '(hl-line ((t :background unspecified :underline unspecified)))
+ '(hl-line ((t :background transparent :underline unspecified)))
 
  ;; Errors
  '(font-lock-error-face ((t (:background "#C8564A" :foreground "#EFF1F5"))))
@@ -175,7 +175,7 @@
 
  ;; Smart Parens ;;
 ;;;;;;;;;;;;;;;;;;
- '(sp-pair-overlay-face ((t (:background "#202022"))))
+ '(sp-pair-overlay-face ((t (:background unspecified))))
 
  )
 

@@ -48,7 +48,7 @@
  '(flx-highlight-face ((t (:foreground "#649CD8"))))
 
  ;; The Selected Line
- '(hl-line ((t :background unspecified :underline unspecified)))
+ '(hl-line ((t :background "#2d2d2d" :underline unspecified)))
 
  ;; Errors
  '(font-lock-error-face ((t (:background "#F7756F" :foreground "#2D2D2D"))))
@@ -160,7 +160,7 @@
  `(erc-button ((t (:foreground "#379A6A"))))
  `(erc-prompt-face ((t (:foreground "#444"))))
 
- `(show-paren-match ((t (:background unspecified :foreground unspecified :underline t))))
+ `(show-paren-match ((t (:background unspecified :foreground "#FCD05E" :underline nil :weight bold))))
 
  ;; Web Mode ;;
  ;;;;;;;;;;;;;;
@@ -178,9 +178,8 @@
 
  ;; Smart Parens ;;
 ;;;;;;;;;;;;;;;;;;
- '(sp-pair-overlay-face ((t (:background "#202022"))))
-
- )
+ '(sp-pair-overlay-face ((t (:background "#2D2D2D"))))
+)
 
 ;;;###autoload
 (when load-file-name
