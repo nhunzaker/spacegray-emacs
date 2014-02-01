@@ -5,37 +5,36 @@
 ;;; Version: 0.0.1
 
 ;;; Code:
-(deftheme spacegray-light "Spacegray Light color theme")
+(deftheme spacegray-ocean "Spacegray color theme")
 
 (setq underline-minimum-offset 4)
 
-(let ((base00 "#151515")
-      (base01 "#202020")
-      (base02 "#303030")
-      (base03 "#505050")
-      (base04 "#b0b0b0")
-      (base05 "#d0d0d0")
-      (base06 "#e0e0e0")
-      (base07 "#f5f5f5")
-      (base08 "#ac4142")
-      (base09 "#d28445")
-      (base10 "#f4bf75")
-      (base11 "#90A959")
-      (base12 "#75b5aa")
-      (base13 "#6a9fb5")
-      (base14 "#aa759f")
-      (base15 "#8f5536"))
+(let ((base00 "#2B303B")
+      (base01 "#343D46")
+      (base02 "#4F5B66")
+      (base03 "#65737E")
+      (base04 "#A7ADBA")
+      (base05 "#C0C5CE")
+      (base06 "#DFE1E8")
+      (base07 "#EFF1F5")
+      (base08 "#BF616A")
+      (base09 "#D08770")
+      (base10 "#EBCB8B")
+      (base11 "#A3BE8C")
+      (base12 "#96B5B4")
+      (base13 "#8FA1B3")
+      (base14 "#B48EAD")
+      (base15 "#AB7967"))
 
-  (let ((background-color base07)
-        (focus-color base03)
-        (highlight-color base09)
-        (text-color base03)
+  (let ((background-color base00)
+        (focus-color base02)
+        (highlight-color base10)
+        (text-color base05)
         (error-color base08)
-        (comment-color base04)
         (warning-color base09))
 
     (custom-theme-set-faces
-     'spacegray-light
+     'spacegray
 
      `(default ((t (:background ,background-color :foreground ,text-color ))))
      `(cursor  ((t (:background ,text-color, :foreground ,background-color))))
@@ -136,14 +135,14 @@
 
      ;; Not known so far for anything other than Lisp attributes and
      ;; "this" in javascript
-     `(font-lock-builtin-face ((t (:foreground ,base11 :weight bold))))
+     `(font-lock-builtin-face ((t (:foreground ,highlight-color :weight bold))))
 
      ;; Comments
-     `(font-lock-comment-face ((t (:slant italic :foreground ,comment-color))))
-     `(font-lock-doc-face ((t (:foreground ,comment-color))))
+     `(font-lock-comment-face ((t (:slant italic :foreground ,focus-color))))
+     `(font-lock-doc-face ((t (:foreground ,focus-color))))
 
      ;; Constants
-     `(font-lock-constant-face ((t (:foreground ,base15))))
+     `(font-lock-constant-face ((t (:foreground ,base12))))
 
      ;; Function names (not the keyword "function")
      `(font-lock-function-name-face ((t (:foreground ,base12 :bold t))))
@@ -174,15 +173,15 @@
 
      ;; Rainbow Mode
      `(rainbow-delimiters-unmatched-face ((t (:foreground ,error-color))))
-     `(rainbow-delimiters-depth-1-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-2-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-3-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-4-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-5-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-6-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-7-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-8-face ((t (:foreground ,base03))))
-     `(rainbow-delimiters-depth-9-face ((t (:foreground ,base03))))
+     `(rainbow-delimiters-depth-1-face ((t (:foreground ,base04))))
+     `(rainbow-delimiters-depth-2-face ((t (:foreground ,base05))))
+     `(rainbow-delimiters-depth-3-face ((t (:foreground ,base06))))
+     `(rainbow-delimiters-depth-4-face ((t (:foreground ,base07))))
+     `(rainbow-delimiters-depth-5-face ((t (:foreground ,base11))))
+     `(rainbow-delimiters-depth-6-face ((t (:foreground ,highlight-color))))
+     `(rainbow-delimiters-depth-7-face ((t (:foreground ,base09))))
+     `(rainbow-delimiters-depth-8-face ((t (:foreground ,base08))))
+     `(rainbow-delimiters-depth-9-face ((t (:foreground ,base15))))
 
      ;; JS2 MODE ;;
      ;;;;;;;;;;;;;
@@ -200,7 +199,7 @@
      ;; WHITESPACE MODE ;;
  ;;;;;;;;;;;;;;;;;;;;
 
-     `(whitespace-tab ((t (:background nil :foreground nil :underline (:color ,base05 :style wave)))))
+     `(whitespace-tab ((t (:background nil :foreground nil :underline (:color ,base02 :style wave)))))
      `(whitespace-indentation ((t (:background nil :foreground ,base02 ))))
      `(trailing-whitespace ((t (:background ,base08 :foreground ,base02))))
      `(whitespace-trailing ((t (:background ,base08 :foreground ,base02))))
@@ -347,10 +346,10 @@
   (add-to-list `custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'spacegray-light)
+(provide-theme 'spacegray-ocean)
 
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; End:
 
-;;; spacegray-light-theme.el ends here
+;;; spacegray-theme.el ends here
