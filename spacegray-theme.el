@@ -38,14 +38,14 @@
      'spacegray
 
      ;; Basics
-     `(cursor  ((t (:background ,text-color, :foreground ,background-color))))
+     `(cursor ((t (:background ,text-color, :foreground ,background-color))))
      `(default ((t (:background ,background-color :foreground ,text-color ))))
      `(header-line ((t (:background unspecified :foreground unspecified))))
      `(isearch ((t (:background ,highlight-color :foreground ,background-color))))
      `(isearch-fail ((t (:background ,error-color :foreground ,background-color))))
-     `(match   ((t (:background ,focus-color :foreground unspecified))))
+     `(match ((t (:background ,focus-color :foreground unspecified))))
      `(menu ((t (:background ,text-color :foreground ,background-color))))
-     `(region  ((t (:background ,base02 :foreground unspecified))))
+     `(region ((t (:background ,base02 :foreground unspecified))))
      `(warning ((t (:foreground ,warning-color))))
      `(linum ((t (:foreground ,focus-color :background nil :underline nil))))
 
@@ -58,13 +58,13 @@
      `(lazy-highlight ((t (:background ,base02 :foreground ,text-color))))
 
      `(minibuffer-prompt ((t (:foreground ,base07 :weight bold))))
-     `(mode-line ((t (:background ,base01-down :height 140 :foreground ,focus-color :box (:line-width 10 :color ,base01-down )))))
+     `(mode-line ((t (:background ,base01-down :height 140 :foreground ,base03 :box (:line-width 10 :color ,base01-down )))))
      `(mode-line-inactive ((t (:background ,base01-up :height 140 :foreground ,focus-color :box (:line-width 10 :color ,base01-up) ))))
      `(mode-line-highlight ((t (:foreground ,base05 :box nil))))
 
      ;; The Border around the edge of the frame
      `(fringe ((t (:background unspecified))))
-     `(vertical-border ((t (:background ,base00 :foreground ,base02 ))))
+     `(vertical-border ((t (:background ,base00 :foreground ,base01-up ))))
 
      `(font-lock-builtin-face ((t (:foreground ,base10 :weight bold))))
      `(font-lock-comment-face ((t (:slant italic :foreground ,comment-color))))
@@ -184,7 +184,7 @@
      `(whitespace-line ((t (:background unspecified :foreground unspecified :underline (:color ,base09 :style wave)))))
 
      ;; Flyspell
-     `(flyspell-incorrect ((t (:background ,background-color :underline (:color ,base09 :style wave) :foreground unspecified))))
+     `(flyspell-incorrect ((t (:background ,background-color :underline (:color ,base09 :style wave) :foreground nil))))
      `(flyspell-duplicate ((t (:foreground nil :underline (:color ,base09 :style wave)))))
 
      ;; YAML ;;
@@ -200,8 +200,7 @@
      `(scss-keyword-face ((t (:foreground ,base14 ))))
 
      ;; Markdown Mode ;;
- ;;;;;;;;;;;;;;;;;;
-
+     ;;;;;;;;;;;;;;;;;;
      `(markdown-header-face   ((t (:foreground ,base08))))
      `(markdown-header-face-6 ((t (:foreground ,base08))))
      `(markdown-header-face-5 ((t (:foreground ,base09))))
@@ -209,8 +208,8 @@
      `(markdown-header-face-3 ((t (:foreground ,base11))))
      `(markdown-header-face-2 ((t (:foreground ,base12))))
      `(markdown-header-face-1 ((t (:foreground ,base13))))
-
      `(markdown-bold-face  ((t (:foreground ,base08 :bold t))))
+     `(markdown-blockquote-face  ((t (:foreground,comment-color :italic t))))
 
      ;; ERC Mode ;;
      ;;;;;;;;;;;;;
